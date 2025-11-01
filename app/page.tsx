@@ -304,27 +304,28 @@ export default function Home() {
       </section>
 
       {/* Auto Carousel Section - Column Layout */}
-      <section className="bg-white py-16">
-        <div className="mx-auto max-w-7xl px-4">
-          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+      <section className="bg-white py-12 sm:py-16 overflow-x-hidden">
+        <div className="mx-auto max-w-7xl px-3 sm:px-4 md:px-6">
+          <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16 items-start lg:items-center">
             {/* Left Side - Text Content */}
-            <ScrollAnimate direction="left" delay={0}>
-              <p className="text-sm font-semibold text-orange-600 tracking-widest uppercase">OUR SERVICES</p>
-              <h2 className="mt-4 text-3xl sm:text-4xl font-bold text-zinc-900 leading-tight">
+            <ScrollAnimate direction="left" delay={0} className="w-full min-w-0">
+              <p className="text-xs sm:text-sm font-semibold text-orange-600 tracking-widest uppercase">OUR SERVICES</p>
+              <h2 className="mt-3 sm:mt-4 text-2xl sm:text-3xl lg:text-4xl font-bold text-zinc-900 leading-tight">
                 We Go Beyond Documentation
               </h2>
-              <div className="mt-6 h-1 w-16 bg-orange-600"></div>
-              <p className="mt-8 text-lg text-zinc-600 leading-8">
+              <div className="mt-4 sm:mt-6 h-1 w-12 sm:w-16 bg-orange-600"></div>
+              <p className="mt-6 sm:mt-8 text-sm sm:text-base md:text-lg text-zinc-600 leading-7 sm:leading-8">
                 Our approach combines technology with personalized service to provide comprehensive solutions for all your real estate documentation needs. We go beyond data to provide strategic recommendations and guidance.
               </p>
-              <p className="mt-6 text-lg text-zinc-600 leading-8">
+              <p className="mt-4 sm:mt-6 text-sm sm:text-base md:text-lg text-zinc-600 leading-7 sm:leading-8">
                 From descriptive to predictive and prescriptive, we provide the full spectrum of guidance you need to succeed. Our approach layers multiple methods to provide a richer, more comprehensive understanding of your needs.
               </p>
             </ScrollAnimate>
 
             {/* Right Side - Auto Carousel */}
-            <ScrollAnimate direction="right" delay={200}>
-              <AutoCarousel
+            <ScrollAnimate direction="right" delay={200} className="w-full min-w-0">
+              <div className="w-full overflow-hidden">
+                <AutoCarousel
                 items={[
                   {
                     title: "Conversational Approach",
@@ -351,7 +352,8 @@ export default function Home() {
                     icon: "🚪",
                   },
                 ]}
-              />
+                />
+              </div>
             </ScrollAnimate>
           </div>
         </div>
