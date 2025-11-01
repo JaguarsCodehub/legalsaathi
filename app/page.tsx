@@ -74,10 +74,10 @@ export default function Home() {
   ];
 
   const stats = [
-    { value: "5000+", label: "Documents" },
-    { value: "50+", label: "Cities" },
-    { value: "25+", label: "Countries" },
-    { value: "4500+", label: "Happy Customers" },
+    { value: "12,500+", label: "Legal Documents" },
+    { value: "8,200+", label: "Real Estate Transactions" },
+    { value: "65+", label: "Cities Served" },
+    { value: "98%", label: "Client Satisfaction" },
   ];
 
   return (
@@ -87,7 +87,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
           <p className="flex items-center gap-2 text-white/90">
             <span className="text-red-500">📍</span>
-            302/3, Manish Chamber, Sonawala Rd, Goregaon (E), Mumbai 400063
+            507/4, Saidham Society, Kokan Nagar, Jogeshwari (E), Mumbai 400063
           </p>
           <div className="flex items-center gap-6 text-white/90">
             <a href="tel:+919969292000" className="hover:text-white transition-colors">+91 99692 92000</a>
@@ -120,50 +120,98 @@ export default function Home() {
       </header>
 
       {/* Hero */}
-      <section id="home" className="relative bg-zinc-50 pt-8">
-        <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-8 items-center px-4 py-16 lg:py-24">
+      <section id="home" className="relative bg-gradient-to-br from-orange-50 via-amber-50 to-orange-100 pt-8 overflow-hidden">
+        {/* Decorative background elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-20 -left-20 w-72 h-72 bg-orange-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-float"></div>
+          <div className="absolute top-40 right-10 w-72 h-72 bg-amber-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-float" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute -bottom-20 left-1/2 w-72 h-72 bg-orange-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-float" style={{ animationDelay: '4s' }}></div>
+        </div>
+        
+        <div className="relative mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-8 items-center px-4 py-16 lg:py-24">
           <ScrollAnimate direction="right" delay={0}>
-            <h1 className="text-4xl sm:text-5xl font-bold leading-tight tracking-tight">
-              Hassle Free
-              <br /> Online Rent Agreement
-              <br /> Registration
-            </h1>
-            <p className="mt-6 text-lg text-zinc-600 max-w-xl">
-              Skip the queue and get your rent agreement registered in no time with our certified e‑registration service provider.
-            </p>
-            <div className="mt-8 flex items-center gap-4">
-              <Link href="#quote" className="rounded-md bg-orange-600 text-white px-6 py-3 font-medium hover:bg-orange-700 transition-colors shadow-md hover:shadow-lg hover:scale-105 transform">
-                Create Your Draft Now
-              </Link>
-              <a href="#how" className="text-orange-700 font-medium hover:underline transition-all">
-                How it works
-              </a>
+            <div className="relative z-10">
+              <span className="inline-block px-4 py-2 bg-orange-100 text-orange-700 rounded-full text-sm font-semibold mb-4 animate-pulse-glow">
+                Your Trusted Real Estate & Legal Partner
+              </span>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight bg-gradient-to-r from-orange-700 via-orange-600 to-amber-600 bg-clip-text text-transparent">
+                Real Estate Legal
+                <br /> Documents Made
+                <br /> Simple & Secure
+              </h1>
+              <p className="mt-6 text-lg sm:text-xl text-zinc-700 max-w-xl leading-relaxed">
+                Complete Real Estate documentation and legal services at your doorstep. From property registration to lease agreements, we handle all your legal document needs with expertise and care.
+              </p>
+              <div className="mt-8 flex flex-wrap items-center gap-4">
+                <Link href="#quote" className="group relative rounded-lg bg-gradient-to-r from-orange-600 to-amber-600 text-white px-8 py-4 font-semibold hover:from-orange-700 hover:to-amber-700 transition-all shadow-lg hover:shadow-xl hover:scale-105 transform overflow-hidden">
+                  <span className="relative z-10">Get Free Consultation</span>
+                  <div className="absolute inset-0 shimmer-effect opacity-0 group-hover:opacity-100"></div>
+                </Link>
+                <a href="#how" className="group text-orange-700 font-semibold hover:text-orange-800 transition-all flex items-center gap-2">
+                  <span>How it works</span>
+                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </a>
+              </div>
+              {/* Quick stats in hero */}
+              <div className="mt-12 flex flex-wrap gap-6">
+                <div className="flex items-center gap-2">
+                  <div className="h-2 w-2 bg-orange-600 rounded-full animate-pulse"></div>
+                  <span className="text-sm font-medium text-zinc-700">100% Legal Compliance</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="h-2 w-2 bg-orange-600 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+                  <span className="text-sm font-medium text-zinc-700">Doorstep Service</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="h-2 w-2 bg-orange-600 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
+                  <span className="text-sm font-medium text-zinc-700">Expert Legal Support</span>
+                </div>
+              </div>
             </div>
           </ScrollAnimate>
           <ScrollAnimate direction="left" delay={200}>
-            <div className="relative">
-        <Image
-                src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1600&auto=format&fit=crop"
-                alt="Happy family in their new home"
-                width={1600}
-                height={1200}
-                className="rounded-xl shadow-lg w-full h-auto object-cover hover:shadow-xl transition-shadow duration-300 hover:scale-105 transform"
-          priority
-        />
+            <div className="relative z-10">
+              <div className="relative group">
+                <div className="absolute -inset-4 bg-gradient-to-r from-orange-400 to-amber-400 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
+                <Image
+                  src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1600&auto=format&fit=crop"
+                  alt="Real Estate and Legal Documents"
+                  width={1600}
+                  height={1200}
+                  className="relative rounded-2xl shadow-2xl w-full h-auto object-cover hover:shadow-orange-200/50 transition-all duration-500 hover:scale-[1.02] transform"
+                  priority
+                />
+                {/* Floating badge overlay */}
+                <div className="absolute top-6 right-6 bg-white/90 backdrop-blur-sm rounded-full px-6 py-3 shadow-lg border-2 border-orange-200 animate-float">
+                  <div className="flex items-center gap-2">
+                    <div className="h-3 w-3 bg-green-500 rounded-full animate-pulse"></div>
+                    <span className="text-sm font-bold text-orange-700">Trusted by 12K+ Clients</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </ScrollAnimate>
         </div>
       </section>
 
       {/* Stats */}
-      <section className="bg-orange-600 text-white py-12">
-        <div className="mx-auto max-w-7xl px-4">
+      <section className="bg-gradient-to-r from-orange-600 via-orange-700 to-amber-700 text-white py-16 relative overflow-hidden">
+        {/* Decorative pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '40px 40px' }}></div>
+        </div>
+        <div className="relative mx-auto max-w-7xl px-4">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <ScrollAnimate key={index} direction="up" delay={index * 100}>
-                <div className="text-center">
-                  <div className="text-3xl sm:text-4xl font-bold text-white hover:scale-110 transition-transform duration-300">{stat.value}</div>
-                  <div className="mt-2 text-white/80 text-sm sm:text-base">{stat.label}</div>
+                <div className="text-center group relative">
+                  <div className="absolute inset-0 bg-white/10 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="relative bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 transform">
+                    <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-2 group-hover:scale-110 transition-transform duration-300">{stat.value}</div>
+                    <div className="mt-2 text-white/90 text-sm sm:text-base font-medium">{stat.label}</div>
+                  </div>
                 </div>
               </ScrollAnimate>
             ))}
@@ -172,15 +220,22 @@ export default function Home() {
       </section>
 
       {/* Steps - Simplified for Hero */}
-      <section id="how" className="bg-[#fef3e2] relative overflow-hidden py-16">
+      <section id="how" className="bg-gradient-to-b from-orange-50 via-amber-50 to-orange-50 relative overflow-hidden py-16">
         <div className="mx-auto max-w-7xl px-4">
           <ScrollAnimate direction="up" delay={0}>
             <div className="text-center">
-              <p className="text-sm font-semibold text-zinc-900 tracking-widest uppercase">JUST 4 SIMPLE STEPS!</p>
-              <h2 className="mt-2 text-3xl sm:text-4xl font-bold">How it works with LegalSaathi?</h2>
-              <div className="mt-4 flex justify-center gap-2">
-                <div className="h-1 w-12 bg-orange-600"></div>
-                <div className="h-1 w-8 bg-orange-600"></div>
+              <span className="inline-block px-4 py-2 bg-orange-100 text-orange-700 rounded-full text-sm font-semibold mb-4">
+                SIMPLE & EFFICIENT PROCESS
+              </span>
+              <h2 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-orange-700 to-amber-700 bg-clip-text text-transparent">
+                How it works with LegalSaathi?
+              </h2>
+              <p className="mt-4 text-lg text-zinc-600 max-w-2xl mx-auto">
+                Complete your Real Estate documentation in just 4 simple steps
+              </p>
+              <div className="mt-6 flex justify-center gap-2">
+                <div className="h-1 w-12 bg-gradient-to-r from-orange-600 to-amber-600 rounded-full"></div>
+                <div className="h-1 w-8 bg-gradient-to-r from-amber-600 to-orange-600 rounded-full"></div>
               </div>
             </div>
           </ScrollAnimate>
@@ -210,17 +265,17 @@ export default function Home() {
               <ScrollAnimate key={card.title} direction="up" delay={index * 150}>
                 <div className="relative group flex justify-center">
                   {/* Modern Card Design - Bigger */}
-                  <div className="relative w-full rounded-3xl bg-white p-8 sm:p-10 text-center shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border-2 border-zinc-100 hover:border-orange-300 overflow-hidden group-hover:bg-orange-50/30 min-h-[320px] flex flex-col justify-between">
+                  <div className="relative w-full rounded-3xl bg-white p-8 sm:p-10 text-center shadow-xl hover:shadow-2xl hover:shadow-orange-200/50 transition-all duration-500 hover:-translate-y-3 border-2 border-orange-100 hover:border-orange-300 overflow-hidden group-hover:bg-gradient-to-br group-hover:from-orange-50 group-hover:to-amber-50 min-h-[320px] flex flex-col justify-between">
                   {/* Decorative accent on hover */}
-                  <div className="absolute inset-0 bg-orange-50/0 group-hover:bg-orange-50/50 transition-all duration-500 pointer-events-none"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-orange-50/0 to-amber-50/0 group-hover:from-orange-50/60 group-hover:to-amber-50/60 transition-all duration-500 pointer-events-none"></div>
                   
                   {/* Step number badge - Smaller, fits in card */}
                   <div className="absolute top-3 left-1/2 -translate-x-1/2 h-9 w-9 bg-black text-white rounded-full flex items-center justify-center text-xs font-bold shadow-xl ring-3 ring-white z-20 group-hover:scale-110 transition-transform duration-500">
                     {card.stepNumber}
                   </div>
                   
-                  {/* Icon container - Bigger, no gradient */}
-                  <div className="relative mx-auto mt-6 mb-8 flex h-28 w-28 items-center justify-center rounded-3xl bg-orange-50 border-2 border-orange-200 text-5xl shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 group-hover:border-orange-400 group-hover:bg-orange-100">
+                  {/* Icon container - Bigger, with gradient */}
+                  <div className="relative mx-auto mt-6 mb-8 flex h-28 w-28 items-center justify-center rounded-3xl bg-gradient-to-br from-orange-50 to-amber-50 border-2 border-orange-200 text-5xl shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 group-hover:border-orange-400 group-hover:bg-gradient-to-br group-hover:from-orange-100 group-hover:to-amber-100 group-hover:shadow-orange-200/50">
                     <div className="relative z-10">{card.icon}</div>
                   </div>
                   
@@ -239,7 +294,7 @@ export default function Home() {
                   )}
                   
                     {/* Bottom accent line - always visible */}
-                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-16 h-1 bg-orange-600 rounded-full"></div>
+                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-16 h-1.5 bg-gradient-to-r from-orange-600 to-amber-600 rounded-full group-hover:w-20 transition-all duration-500"></div>
                   </div>
                 </div>
               </ScrollAnimate>
@@ -303,77 +358,116 @@ export default function Home() {
       </section>
 
       {/* About & Services - Enhanced */}
-      <section id="about" className="relative py-16 bg-zinc-50">
+      <section id="services" className="relative py-16 bg-gradient-to-b from-white to-orange-50/30">
         <div className="mx-auto max-w-7xl px-4">
           <ScrollAnimate direction="up" delay={0}>
             <div className="text-center mb-16">
-              <p className="text-sm font-semibold text-orange-600 tracking-widest uppercase">WE MAKE EASIER FOR YOU TO REGISTER</p>
-              <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold text-zinc-900">Our Core Services</h2>
-              <div className="mt-6 h-1 w-20 bg-orange-600 mx-auto"></div>
+              <span className="inline-block px-4 py-2 bg-orange-100 text-orange-700 rounded-full text-sm font-semibold mb-4">
+                COMPREHENSIVE LEGAL SERVICES
+              </span>
+              <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-orange-700 to-amber-700 bg-clip-text text-transparent">
+                Our Core Services
+              </h2>
+              <p className="mt-4 text-lg text-zinc-600 max-w-2xl mx-auto">
+                Complete Real Estate Documentation & Legal Services for Your Property Needs
+              </p>
+              <div className="mt-6 flex justify-center gap-2">
+                <div className="h-1 w-12 bg-orange-600"></div>
+                <div className="h-1 w-8 bg-amber-600"></div>
+              </div>
             </div>
           </ScrollAnimate>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
             {[
               {
-                title: "Leave & License",
-                desc: "Leave and License Agreement commonly known as Rent Agreement. A leave and license agreement means permission given by the owner of the property.",
-                image: "https://images.pexels.com/photos/3797239/pexels-photo-3797239.jpeg?auto=compress&cs=tinysrgb&w=800",
-              },
-              {
-                title: "Sale Agreement",
-                desc: "We are acclaimed and approved by the people of Maharashtra for equipping an effortless Sales Agreement service all over the state.",
+                title: "Property Sale Agreements",
+                desc: "Comprehensive sale agreement documentation for real estate transactions. Get legally binding contracts drafted and registered with expert legal guidance for property sales.",
                 image: "https://images.pexels.com/photos/5797997/pexels-photo-5797997.jpeg?auto=compress&cs=tinysrgb&w=800",
+                icon: "🏠",
               },
               {
-                title: "Distant Leave & License",
-                desc: "Are you residing out of Maharashtra or India? But own a property in Maharashtra? Looking forward to rent out the property? We've got you covered.",
+                title: "Leave & License Agreements",
+                desc: "Professional rent agreement services with complete legal documentation. We handle leave and license agreements for residential and commercial properties with doorstep service.",
+                image: "https://images.pexels.com/photos/3797239/pexels-photo-3797239.jpeg?auto=compress&cs=tinysrgb&w=800",
+                icon: "📋",
+              },
+              {
+                title: "Property Registration",
+                desc: "Authorized property registration services approved by Government of Maharashtra. We ensure smooth registration process for all your real estate documents.",
                 image: "https://images.pexels.com/photos/7710168/pexels-photo-7710168.jpeg?auto=compress&cs=tinysrgb&w=800",
+                icon: "✅",
+              },
+              {
+                title: "Legal Document Drafting",
+                desc: "Expert legal document drafting services for all your real estate needs. From contracts to agreements, we provide comprehensive legal documentation support.",
+                image: "https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=800",
+                icon: "✍️",
+              },
+              {
+                title: "Property Verification",
+                desc: "Thorough property verification and due diligence services. We help verify property titles, ownership, and legal status before you make any real estate investment.",
+                image: "https://images.pexels.com/photos/7578935/pexels-photo-7578935.jpeg?auto=compress&cs=tinysrgb&w=800",
+                icon: "🔍",
+              },
+              {
+                title: "Remote Legal Services",
+                desc: "Complete legal documentation services for property owners residing outside Maharashtra or India. Get biometric verification and document processing done remotely.",
+                image: "https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=800",
+                icon: "🌐",
               },
             ].map((service, index) => (
               <ScrollAnimate key={service.title} direction="up" delay={index * 150}>
-                <div className="group relative rounded-3xl overflow-hidden bg-white border-2 border-zinc-100 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-                {/* Image Container with Overlay */}
-                <div className="relative h-64 overflow-hidden">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-700"
-                  />
-                  {/* Dark Overlay */}
-                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="group relative rounded-3xl overflow-hidden bg-white border-2 border-orange-100 shadow-lg hover:shadow-2xl hover:shadow-orange-200/50 transition-all duration-500 hover:-translate-y-3">
+                  {/* Gradient background on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-orange-50/0 to-amber-50/0 group-hover:from-orange-50/50 group-hover:to-amber-50/50 transition-all duration-500"></div>
                   
-                  {/* Floating Badge */}
-                  <div className="absolute top-4 right-4 h-10 w-10 bg-orange-600 rounded-full flex items-center justify-center text-white font-bold shadow-xl opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500">
-                    {index + 1}
+                  {/* Image Container with Overlay */}
+                  <div className="relative h-64 overflow-hidden">
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-700"
+                    />
+                    {/* Gradient Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-orange-900/60 via-orange-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    
+                    {/* Icon Badge */}
+                    <div className="absolute top-4 left-4 h-14 w-14 bg-white/95 backdrop-blur-sm rounded-xl flex items-center justify-center text-3xl shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 border-2 border-orange-200">
+                      {service.icon}
+                    </div>
+                    
+                    {/* Floating Badge */}
+                    <div className="absolute top-4 right-4 h-10 w-10 bg-gradient-to-br from-orange-600 to-amber-600 rounded-full flex items-center justify-center text-white font-bold shadow-xl opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 animate-pulse-glow">
+                      {index + 1}
+                    </div>
                   </div>
-                </div>
-                
-                {/* Content */}
-                <div className="p-8">
-                  <h3 className="font-bold text-2xl mb-4 text-zinc-900 group-hover:text-orange-600 transition-colors duration-300">
-                    {service.title}
-                  </h3>
-                  <p className="text-zinc-600 leading-7 mb-6 text-base">
-                    {service.desc}
-                  </p>
                   
-                  {/* Read More Button - Enhanced */}
-                  <button className="inline-flex items-center gap-2 text-orange-600 font-semibold hover:gap-3 transition-all duration-300 group/btn">
-                    <span>Read More</span>
-                    <svg 
-                      className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform duration-300" 
-                      fill="none" 
-                      stroke="currentColor" 
-                      viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </button>
-                </div>
-                
+                  {/* Content */}
+                  <div className="relative p-8 bg-white">
+                    <h3 className="font-bold text-2xl mb-4 text-zinc-900 group-hover:text-orange-700 transition-colors duration-300">
+                      {service.title}
+                    </h3>
+                    <p className="text-zinc-600 leading-7 mb-6 text-base">
+                      {service.desc}
+                    </p>
+                    
+                    {/* Read More Button - Enhanced */}
+                    <button className="inline-flex items-center gap-2 text-orange-600 font-semibold hover:text-orange-700 hover:gap-3 transition-all duration-300 group/btn">
+                      <span>Learn More</span>
+                      <svg 
+                        className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform duration-300" 
+                        fill="none" 
+                        stroke="currentColor" 
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </button>
+                  </div>
+                  
                   {/* Bottom Accent Line */}
-                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-orange-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                  <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r from-orange-600 to-amber-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
                 </div>
               </ScrollAnimate>
             ))}
@@ -382,7 +476,7 @@ export default function Home() {
       </section>
 
       {/* About LegalSaathi */}
-      <section className="bg-zinc-50 py-16">
+      <section className="bg-gradient-to-b from-white to-orange-50/20 py-16">
         <div className="mx-auto max-w-7xl px-4 grid lg:grid-cols-2 gap-10 items-center">
           <ScrollAnimate direction="left" delay={0}>
             <p className="text-sm font-semibold text-orange-700 tracking-widest uppercase">AUTHORISED SERVICE PROVIDER (ASP)</p>
@@ -392,7 +486,7 @@ export default function Home() {
               We are a group of professionals who are Authorized Service Provider (ASP) approved by Department of Registration and Stamps, Govt of Maharashtra who work to simplify legal documentation.
             </p>
             <p className="mt-4 text-zinc-700 leading-7">
-              We combine technology with Government's latest e-initiative technology and documentation services to clients at the best rates in market. We bring numerous Government services under one roof & simplify them in a manner that a common man can understand.
+              We combine technology with Government&apos;s latest e-initiative technology and documentation services to clients at the best rates in market. We bring numerous Government services under one roof & simplify them in a manner that a common man can understand.
             </p>
             <div className="mt-6 bg-white rounded-lg p-4 border border-orange-200 inline-block hover:shadow-lg transition-shadow duration-300">
               <p className="text-sm text-zinc-600 mb-1">MAH-ASP-3973/2019</p>
@@ -414,7 +508,7 @@ export default function Home() {
       </section>
 
       {/* Registration Made Simple */}
-      <section className="bg-white py-16">
+      <section className="bg-gradient-to-b from-orange-50/30 to-white py-16">
         <div className="mx-auto max-w-7xl px-4 grid lg:grid-cols-2 gap-10 items-center">
           <ScrollAnimate direction="right" delay={0} className="relative order-2 lg:order-1">
             <Image
@@ -509,7 +603,7 @@ export default function Home() {
             {testimonials.map((testimonial, index) => (
               <ScrollAnimate key={index} direction="up" delay={index * 150}>
                 <div className="bg-white rounded-xl p-6 border border-zinc-200 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
-                  <div className="text-4xl text-orange-600 mb-4">"</div>
+                  <div className="text-4xl text-orange-600 mb-4">&ldquo;</div>
                   <p className="text-zinc-700 leading-7 mb-6 italic">{testimonial.quote}</p>
                   <div className="border-t border-zinc-200 pt-4">
                     <p className="font-bold text-zinc-900">{testimonial.author}</p>
@@ -563,49 +657,180 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-zinc-200 bg-white">
-        <div className="mx-auto max-w-7xl px-4 py-12">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
+      <footer className="relative border-t-4 border-orange-600 bg-gradient-to-b from-zinc-900 via-zinc-800 to-zinc-900 text-white overflow-hidden">
+        {/* Decorative background pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, orange 1px, transparent 0)', backgroundSize: '50px 50px' }}></div>
+        </div>
+        
+        <div className="relative mx-auto max-w-7xl px-4 py-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+            {/* Brand Column */}
             <div>
-              <div className="flex items-center gap-2 mb-4">
-                <span className="inline-flex h-8 w-8 items-center justify-center rounded bg-orange-600 text-white font-bold">LS</span>
-                <span className="font-bold text-lg">LegalSaathi</span>
+              <div className="flex items-center gap-2 mb-6">
+                <span className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br from-orange-600 to-amber-600 text-white font-bold text-lg shadow-lg hover:scale-110 transition-transform duration-300">
+                  LS
+                </span>
+                <span className="font-bold text-2xl bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">
+                  LegalSaathi
+                </span>
               </div>
-              <p className="text-sm text-zinc-600 leading-6">
-                We are group of professionals and Authorised Service Provider (ASP) approved by Department of Registration and Stamps Govt who work to simplify legal documentation.
+              <p className="text-sm text-zinc-300 leading-7 mb-6">
+                Your trusted partner for Real Estate Legal Documentation. We are Authorised Service Provider (ASP) approved by Department of Registration and Stamps, Government of Maharashtra.
               </p>
+              <div className="flex items-center gap-3">
+                <div className="h-10 w-10 rounded-full bg-orange-600/20 hover:bg-orange-600/30 flex items-center justify-center cursor-pointer transition-all hover:scale-110">
+                  <span className="text-lg">📱</span>
+                </div>
+                <div className="h-10 w-10 rounded-full bg-orange-600/20 hover:bg-orange-600/30 flex items-center justify-center cursor-pointer transition-all hover:scale-110">
+                  <span className="text-lg">📧</span>
+                </div>
+                <div className="h-10 w-10 rounded-full bg-orange-600/20 hover:bg-orange-600/30 flex items-center justify-center cursor-pointer transition-all hover:scale-110">
+                  <span className="text-lg">💼</span>
+                </div>
+              </div>
             </div>
+            
+            {/* Services Column */}
             <div>
-              <h4 className="font-bold mb-4">Quick Links</h4>
-              <ul className="space-y-2 text-sm text-zinc-600">
-                <li><a href="#services" className="hover:text-orange-600 transition-colors">Leave & License</a></li>
-                <li><a href="#services" className="hover:text-orange-600 transition-colors">Sale Agreement</a></li>
-                <li><a href="#services" className="hover:text-orange-600 transition-colors">Distant Leave & License</a></li>
-                <li><a href="#about" className="hover:text-orange-600 transition-colors">About</a></li>
+              <h4 className="font-bold text-lg mb-6 text-orange-400 flex items-center gap-2">
+                <span className="h-1 w-8 bg-gradient-to-r from-orange-500 to-amber-500 rounded"></span>
+                Real Estate Services
+              </h4>
+              <ul className="space-y-3 text-sm text-zinc-300">
+                <li>
+                  <a href="#services" className="hover:text-orange-400 transition-colors duration-300 flex items-center gap-2 group">
+                    <span className="w-1.5 h-1.5 bg-orange-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    Property Sale Agreements
+                  </a>
+                </li>
+                <li>
+                  <a href="#services" className="hover:text-orange-400 transition-colors duration-300 flex items-center gap-2 group">
+                    <span className="w-1.5 h-1.5 bg-orange-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    Leave & License Agreements
+                  </a>
+                </li>
+                <li>
+                  <a href="#services" className="hover:text-orange-400 transition-colors duration-300 flex items-center gap-2 group">
+                    <span className="w-1.5 h-1.5 bg-orange-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    Property Registration
+                  </a>
+                </li>
+                <li>
+                  <a href="#services" className="hover:text-orange-400 transition-colors duration-300 flex items-center gap-2 group">
+                    <span className="w-1.5 h-1.5 bg-orange-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    Legal Document Drafting
+                  </a>
+                </li>
+                <li>
+                  <a href="#services" className="hover:text-orange-400 transition-colors duration-300 flex items-center gap-2 group">
+                    <span className="w-1.5 h-1.5 bg-orange-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    Property Verification
+                  </a>
+                </li>
               </ul>
             </div>
+            
+            {/* Resources Column */}
             <div>
-              <h4 className="font-bold mb-4">Resources</h4>
-              <ul className="space-y-2 text-sm text-zinc-600">
-                <li><a href="#how" className="hover:text-orange-600 transition-colors">How It Works</a></li>
-                <li><a href="#quote" className="hover:text-orange-600 transition-colors">Calculator</a></li>
-                <li><a href="#contact" className="hover:text-orange-600 transition-colors">Contact</a></li>
-                <li><a href="#" className="hover:text-orange-600 transition-colors">Privacy Policy</a></li>
+              <h4 className="font-bold text-lg mb-6 text-orange-400 flex items-center gap-2">
+                <span className="h-1 w-8 bg-gradient-to-r from-orange-500 to-amber-500 rounded"></span>
+                Resources
+              </h4>
+              <ul className="space-y-3 text-sm text-zinc-300">
+                <li>
+                  <a href="#how" className="hover:text-orange-400 transition-colors duration-300 flex items-center gap-2 group">
+                    <span className="w-1.5 h-1.5 bg-orange-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    How It Works
+                  </a>
+                </li>
+                <li>
+                  <a href="#quote" className="hover:text-orange-400 transition-colors duration-300 flex items-center gap-2 group">
+                    <span className="w-1.5 h-1.5 bg-orange-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    Get Free Quote
+                  </a>
+                </li>
+                <li>
+                  <a href="#why-choose" className="hover:text-orange-400 transition-colors duration-300 flex items-center gap-2 group">
+                    <span className="w-1.5 h-1.5 bg-orange-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    Why Choose Us
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-orange-400 transition-colors duration-300 flex items-center gap-2 group">
+                    <span className="w-1.5 h-1.5 bg-orange-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    Legal Blog
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-orange-400 transition-colors duration-300 flex items-center gap-2 group">
+                    <span className="w-1.5 h-1.5 bg-orange-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    Privacy Policy
+                  </a>
+                </li>
               </ul>
             </div>
+            
+            {/* Contact Column */}
             <div>
-              <h4 className="font-bold mb-4">Contact Details</h4>
-              <ul className="space-y-2 text-sm text-zinc-600">
-                <li><a href="tel:+919969292000" className="hover:text-orange-600 transition-colors">+91 99692 92000</a></li>
-                <li><a href="tel:+918424000199" className="hover:text-orange-600 transition-colors">+91 84240 00199</a></li>
-                <li><a href="mailto:info@legalsaathi.com" className="hover:text-orange-600 transition-colors">info@legalsaathi.com</a></li>
-                <li className="pt-2">302/3, Manish Chamber, Sonawala Rd, Goregaon (E), Mumbai 400063</li>
+              <h4 className="font-bold text-lg mb-6 text-orange-400 flex items-center gap-2">
+                <span className="h-1 w-8 bg-gradient-to-r from-orange-500 to-amber-500 rounded"></span>
+                Contact Us
+              </h4>
+              <ul className="space-y-4 text-sm text-zinc-300">
+                <li>
+                  <a href="tel:+919969292000" className="hover:text-orange-400 transition-colors duration-300 flex items-center gap-3 group">
+                    <div className="h-10 w-10 rounded-lg bg-orange-600/20 flex items-center justify-center group-hover:bg-orange-600/30 transition-colors">
+                      <span className="text-lg">📞</span>
+                    </div>
+                    <div>
+                      <p className="text-zinc-400 text-xs">Phone</p>
+                      <p className="font-medium">+91 99692 92000</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:+918424000199" className="hover:text-orange-400 transition-colors duration-300 flex items-center gap-3 group">
+                    <div className="h-10 w-10 rounded-lg bg-orange-600/20 flex items-center justify-center group-hover:bg-orange-600/30 transition-colors">
+                      <span className="text-lg">📱</span>
+                    </div>
+                    <div>
+                      <p className="text-zinc-400 text-xs">Alternate</p>
+                      <p className="font-medium">+91 84240 00199</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:info@legalsaathi.com" className="hover:text-orange-400 transition-colors duration-300 flex items-center gap-3 group">
+                    <div className="h-10 w-10 rounded-lg bg-orange-600/20 flex items-center justify-center group-hover:bg-orange-600/30 transition-colors">
+                      <span className="text-lg">✉️</span>
+                    </div>
+                    <div>
+                      <p className="text-zinc-400 text-xs">Email</p>
+                      <p className="font-medium">info@legalsaathi.com</p>
+                    </div>
+                  </a>
+                </li>
+                <li className="pt-2 flex items-start gap-3">
+                  <div className="h-10 w-10 rounded-lg bg-orange-600/20 flex items-center justify-center flex-shrink-0">
+                    <span className="text-lg">📍</span>
+                  </div>
+                  <p className="text-zinc-300 leading-6">
+                    507/4, Saidham Society, Kokan Nagar, Jogeshwari (E), Mumbai 400063
+                  </p>
+                </li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-zinc-200 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-zinc-600">
-            <p>© {new Date().getFullYear()} LegalSaathi. All Rights Reserved</p>
-            <p>Designed with ❤️ for Real Estate Solutions</p>
+          
+          {/* Bottom Bar */}
+          <div className="border-t border-orange-800/50 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p className="text-sm text-zinc-400">
+              © {new Date().getFullYear()} <span className="text-orange-400 font-semibold">LegalSaathi</span>. All Rights Reserved
+            </p>
+            <p className="text-sm text-zinc-400 flex items-center gap-2">
+              Designed with <span className="text-orange-400 animate-pulse">❤️</span> for Real Estate & Legal Solutions
+            </p>
           </div>
         </div>
       </footer>
