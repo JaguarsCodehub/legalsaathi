@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -173,9 +174,28 @@ export default function Footer() {
           <p className="text-sm text-zinc-400">
             © {new Date().getFullYear()} <span className="text-orange-400 font-semibold">LegalSaathi</span>. All Rights Reserved
           </p>
-          <p className="text-sm text-zinc-400 flex items-center gap-2">
-            Designed with <span className="text-orange-400 animate-pulse">❤️</span> for Real Estate & Legal Solutions
-          </p>
+          <a 
+            href="https://growthunger.vercel.app" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 hover:opacity-80 transition-opacity group"
+          >
+            <p className="text-base text-white flex items-center gap-2">
+              Made with <span className="text-red-500">❤️</span> by
+            </p>
+            <span className="text-base text-emerald-500 font-medium">
+              growthunger
+            </span>
+            <div className="h-10 w-10 rounded-full bg-white flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
+              <Image
+                src="/image.png"
+                alt="Growth Unger Logo"
+                width={32}
+                height={32}
+                className="transition-transform group-hover:scale-110"
+              />
+            </div>
+          </a>
         </div>
       </div>
     </footer>
