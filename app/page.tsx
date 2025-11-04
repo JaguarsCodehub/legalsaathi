@@ -87,11 +87,11 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
           <p className="flex items-center gap-2 text-white/90">
             <span className="text-red-500">📍</span>
-            507/4, Saidham Society, Kokan Nagar, Jogeshwari (E), Mumbai 400063
+            Sakinaka, Adnheri East, Mumbai, Maharashtra, India
           </p>
           <div className="flex items-center gap-6 text-white/90">
-            <a href="tel:+919969292000" className="hover:text-white transition-colors">+91 99692 92000</a>
-            <a href="mailto:info@legalsaathi.com" className="hover:text-white transition-colors">info@legalsaathi.com</a>
+            <a href="tel:+919653101966" className="hover:text-white transition-colors">+91 96531 01966</a>
+            <a href="mailto:legalsaathi2000@gmail.com" className="hover:text-white transition-colors">legalsaathi2000@gmail.com</a>
             <span className="text-xs bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-white">GST: 27AxxxxxxxZ</span>
           </div>
         </div>
@@ -108,12 +108,12 @@ export default function Home() {
           </Link>
           <nav className="hidden md:flex items-center gap-8 text-sm">
             <a href="#home" className="text-orange-600 font-medium">Home</a>
-            <a href="#services" className="hover:text-orange-600 transition-colors">Services</a>
+            <Link href="/services" className="hover:text-orange-600 transition-colors">Services</Link>
             <a href="#how" className="hover:text-orange-600 transition-colors">How It Works</a>
-            <a href="#why-choose" className="hover:text-orange-600 transition-colors">Why Choose Us</a>
-            <a href="#contact" className="hover:text-orange-600 transition-colors">Contact</a>
+            <Link href="/why-choose-us" className="hover:text-orange-600 transition-colors">Why Choose Us</Link>
+            <Link href="/contact" className="hover:text-orange-600 transition-colors">Contact</Link>
           </nav>
-          <Link href="#quote" className="hidden md:inline-flex rounded-md bg-orange-600 text-white px-4 py-2 text-sm font-medium hover:bg-orange-700 transition-colors">
+          <Link href="/contact" className="hidden md:inline-flex rounded-md bg-orange-600 text-white px-4 py-2 text-sm font-medium hover:bg-orange-700 transition-colors">
             Get Free Quote
           </Link>
         </div>
@@ -635,7 +635,7 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="font-semibold text-zinc-900">Call Now</p>
-                    <a href="tel:+919969292000" className="text-zinc-600 hover:text-orange-600 transition-colors">+91 99692 92000</a>
+                    <a href="tel:+919653101966" className="text-zinc-600 hover:text-orange-600 transition-colors">+91 96531 01966</a>
                   </div>
                 </div>
                 <div className="flex items-center gap-4 hover:translate-x-2 transition-transform duration-300">
@@ -644,7 +644,7 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="font-semibold text-zinc-900">Email Us</p>
-                    <a href="mailto:info@legalsaathi.com" className="text-zinc-600 hover:text-orange-600 transition-colors">info@legalsaathi.com</a>
+                    <a href="mailto:legalsaathi2000@gmail.com" className="text-zinc-600 hover:text-orange-600 transition-colors">legalsaathi2000@gmail.com</a>
                   </div>
                 </div>
               </div>
@@ -701,34 +701,34 @@ export default function Home() {
               </h4>
               <ul className="space-y-3 text-sm text-zinc-300">
                 <li>
-                  <a href="#services" className="hover:text-orange-400 transition-colors duration-300 flex items-center gap-2 group">
+                  <Link href="/services" className="hover:text-orange-400 transition-colors duration-300 flex items-center gap-2 group">
                     <span className="w-1.5 h-1.5 bg-orange-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                     Property Sale Agreements
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#services" className="hover:text-orange-400 transition-colors duration-300 flex items-center gap-2 group">
+                  <Link href="/services" className="hover:text-orange-400 transition-colors duration-300 flex items-center gap-2 group">
                     <span className="w-1.5 h-1.5 bg-orange-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                     Leave & License Agreements
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#services" className="hover:text-orange-400 transition-colors duration-300 flex items-center gap-2 group">
+                  <Link href="/services" className="hover:text-orange-400 transition-colors duration-300 flex items-center gap-2 group">
                     <span className="w-1.5 h-1.5 bg-orange-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                     Property Registration
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#services" className="hover:text-orange-400 transition-colors duration-300 flex items-center gap-2 group">
+                  <Link href="/services" className="hover:text-orange-400 transition-colors duration-300 flex items-center gap-2 group">
                     <span className="w-1.5 h-1.5 bg-orange-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                     Legal Document Drafting
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#services" className="hover:text-orange-400 transition-colors duration-300 flex items-center gap-2 group">
+                  <Link href="/services" className="hover:text-orange-400 transition-colors duration-300 flex items-center gap-2 group">
                     <span className="w-1.5 h-1.5 bg-orange-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                     Property Verification
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -747,16 +747,16 @@ export default function Home() {
                   </a>
                 </li>
                 <li>
-                  <a href="#quote" className="hover:text-orange-400 transition-colors duration-300 flex items-center gap-2 group">
+                  <Link href="/contact" className="hover:text-orange-400 transition-colors duration-300 flex items-center gap-2 group">
                     <span className="w-1.5 h-1.5 bg-orange-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                     Get Free Quote
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#why-choose" className="hover:text-orange-400 transition-colors duration-300 flex items-center gap-2 group">
+                  <Link href="/why-choose-us" className="hover:text-orange-400 transition-colors duration-300 flex items-center gap-2 group">
                     <span className="w-1.5 h-1.5 bg-orange-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                     Why Choose Us
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a href="#" className="hover:text-orange-400 transition-colors duration-300 flex items-center gap-2 group">
@@ -781,35 +781,35 @@ export default function Home() {
               </h4>
               <ul className="space-y-4 text-sm text-zinc-300">
                 <li>
-                  <a href="tel:+919969292000" className="hover:text-orange-400 transition-colors duration-300 flex items-center gap-3 group">
+                  <a href="tel:+919653101966" className="hover:text-orange-400 transition-colors duration-300 flex items-center gap-3 group">
                     <div className="h-10 w-10 rounded-lg bg-orange-600/20 flex items-center justify-center group-hover:bg-orange-600/30 transition-colors">
                       <span className="text-lg">📞</span>
                     </div>
                     <div>
                       <p className="text-zinc-400 text-xs">Phone</p>
-                      <p className="font-medium">+91 99692 92000</p>
+                      <p className="font-medium">+91 96531 01966</p>
                     </div>
                   </a>
                 </li>
                 <li>
-                  <a href="tel:+918424000199" className="hover:text-orange-400 transition-colors duration-300 flex items-center gap-3 group">
+                  <a href="tel:+919637045108" className="hover:text-orange-400 transition-colors duration-300 flex items-center gap-3 group">
                     <div className="h-10 w-10 rounded-lg bg-orange-600/20 flex items-center justify-center group-hover:bg-orange-600/30 transition-colors">
                       <span className="text-lg">📱</span>
                     </div>
                     <div>
                       <p className="text-zinc-400 text-xs">Alternate</p>
-                      <p className="font-medium">+91 84240 00199</p>
+                      <p className="font-medium">+91 96370 45108</p>
                     </div>
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:info@legalsaathi.com" className="hover:text-orange-400 transition-colors duration-300 flex items-center gap-3 group">
+                  <a href="mailto:legalsaathi2000@gmail.com" className="hover:text-orange-400 transition-colors duration-300 flex items-center gap-3 group">
                     <div className="h-10 w-10 rounded-lg bg-orange-600/20 flex items-center justify-center group-hover:bg-orange-600/30 transition-colors">
                       <span className="text-lg">✉️</span>
                     </div>
                     <div>
                       <p className="text-zinc-400 text-xs">Email</p>
-                      <p className="font-medium">info@legalsaathi.com</p>
+                      <p className="font-medium">legalsaathi2000@gmail.com</p>
                     </div>
                   </a>
                 </li>
@@ -818,7 +818,7 @@ export default function Home() {
                     <span className="text-lg">📍</span>
                   </div>
                   <p className="text-zinc-300 leading-6">
-                    507/4, Saidham Society, Kokan Nagar, Jogeshwari (E), Mumbai 400063
+                    Sakinaka, Adnheri East, Mumbai, Maharashtra, India
                   </p>
                 </li>
               </ul>
@@ -839,7 +839,7 @@ export default function Home() {
 
       {/* Floating WhatsApp Button */}
       <a
-        href="https://wa.me/919969292000"
+        href="https://wa.me/919653101966?text=Hello%2C%20I'm%20interested%20to%20know%20more%20about%20you%20%21"
         target="_blank"
         rel="noreferrer"
         className="fixed bottom-6 right-6 inline-flex h-14 w-14 items-center justify-center rounded-full bg-green-500 text-white shadow-lg hover:bg-green-600 hover:scale-110 transition-all duration-300 z-40"
@@ -851,12 +851,12 @@ export default function Home() {
       </a>
 
       {/* Floating Get Quote Tab */}
-      <a
-        href="#quote"
+      <Link
+        href="/contact"
         className="fixed right-0 top-1/2 -translate-y-1/2 z-40 bg-orange-600 text-white px-3 py-8 rounded-l-lg shadow-lg hover:bg-orange-700 transition-all duration-300 hidden lg:flex items-center"
       >
         <span className="writing-vertical text-sm font-medium">Get Free Quote</span>
-      </a>
+      </Link>
     </div>
   );
 }
