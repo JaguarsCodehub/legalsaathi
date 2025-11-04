@@ -27,7 +27,7 @@ export async function POST(request: NextRequest) {
 
     // Send email using Resend
     const emailData = await resend.emails.send({
-      from: "LegalSaathi Contact Form <onboarding@resend.dev>", // You'll need to verify your domain with Resend
+      from: "Your Legal Saathi Contact Form <onboarding@resend.dev>", // You'll need to verify your domain with Resend
       to: [process.env.CONTACT_EMAIL || "techbrains21@gmail.com"],
       subject: `New Contact Form Submission from ${name}`,
       html: `
@@ -86,7 +86,7 @@ export async function POST(request: NextRequest) {
           <body>
             <div class="header">
               <h1 style="margin: 0;">New Contact Form Submission</h1>
-              <p style="margin: 10px 0 0 0;">LegalSaathi Website</p>
+              <p style="margin: 10px 0 0 0;">Your Legal Saathi Website</p>
             </div>
             <div class="content">
               <div class="field">
@@ -108,7 +108,7 @@ export async function POST(request: NextRequest) {
               </div>
               ` : ''}
               <div class="footer">
-                <p>This email was sent from the LegalSaathi contact form.</p>
+                <p>This email was sent from the Your Legal Saathi contact form.</p>
                 <p>Submitted at: ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })}</p>
               </div>
             </div>

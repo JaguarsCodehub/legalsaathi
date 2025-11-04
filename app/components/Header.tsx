@@ -42,7 +42,7 @@ export default function Header() {
         <div className="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
           <p className="flex items-center gap-2 text-white/90">
             <span className="text-red-500">📍</span>
-            Sakinaka, Adnheri East, Mumbai, Maharashtra, India
+            Sakinaka, Andheri (E), Mumbai - 400072, Maharashtra
           </p>
           <div className="flex items-center gap-6 text-white/90">
             <a href="tel:+919653101966" className="hover:text-white transition-colors">+91 96531 01966</a>
@@ -59,7 +59,7 @@ export default function Header() {
         <div className="mx-auto max-w-7xl px-4 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity" onClick={closeMobileMenu}>
             <span className="inline-flex h-8 w-8 items-center justify-center rounded bg-orange-600 text-white font-bold">LS</span>
-            <span className="font-bold text-lg">LegalSaathi</span>
+            <span className="font-bold text-lg">Your Legal Saathi</span>
           </Link>
           
           {/* Desktop Navigation */}

@@ -11,7 +11,7 @@ export default function WhyChooseUs() {
   const whyChooseItems = [
     {
       title: "Legal Experts",
-      content: "Our team of experienced legal experts at LegalSaathi provides you with comprehensive assistance to make your registration process easier and more efficient. With years of experience in real estate documentation, we ensure all your legal documents are prepared accurately and in compliance with government regulations.",
+      content: "Our team of experienced legal experts at Your Legal Saathi provides you with comprehensive assistance to make your registration process easier and more efficient. With years of experience in real estate documentation, we ensure all your legal documents are prepared accurately and in compliance with government regulations.",
     },
     {
       title: "Doorstep Services",
@@ -83,7 +83,7 @@ export default function WhyChooseUs() {
                 WHY CHOOSE US
               </span>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight bg-gradient-to-r from-orange-700 via-orange-600 to-amber-600 bg-clip-text text-transparent mb-6">
-                Why Choose LegalSaathi?
+                Why Choose Your Legal Saathi?
               </h1>
               <p className="text-lg sm:text-xl text-zinc-700 max-w-2xl mx-auto leading-relaxed">
                 Your trusted partner for real estate legal documentation. We combine expertise, technology, and personalized service to deliver exceptional results.
@@ -125,7 +125,7 @@ export default function WhyChooseUs() {
                 <h2 className="text-3xl sm:text-4xl font-bold mb-6">What Makes Us Different</h2>
                 <div className="h-1 w-16 bg-orange-600 mb-6"></div>
                 <p className="text-zinc-700 leading-7 mb-8">
-                  At LegalSaathi, we go beyond just documentation. We provide comprehensive support, expert guidance, and personalized service to ensure your real estate transactions are smooth, legal, and stress-free.
+                  At Your Legal Saathi, we go beyond just documentation. We provide comprehensive support, expert guidance, and personalized service to ensure your real estate transactions are smooth, legal, and stress-free.
                 </p>
                 <Accordion items={whyChooseItems} />
               </div>

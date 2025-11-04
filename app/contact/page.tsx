@@ -32,7 +32,7 @@ export default function Contact() {
     },
     {
       title: "Address",
-      value: "Sakinaka, Adnheri East, Mumbai, Maharashtra, India",
+      value: "Sakinaka, Andheri (E), Mumbai - 400072, Maharashtra",
       href: "#",
       icon: "📍",
       desc: "Visit our office",
@@ -121,7 +121,7 @@ export default function Contact() {
                     <div className="text-white">
                       <h4 className="font-bold text-lg mb-2">Visit Our Office</h4>
                       <p className="text-sm text-white/90">
-                        Sakinaka, Adnheri East, Mumbai, Maharashtra, India
+                        Sakinaka, Andheri (E), Mumbai - 400072, Maharashtra
                       </p>
                     </div>
                   </div>
@@ -191,7 +191,7 @@ export default function Contact() {
           <ScrollAnimate direction="up" delay={0}>
             <div className="bg-gradient-to-r from-orange-50 to-amber-50 rounded-3xl p-12 text-center border-2 border-orange-200">
               <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-zinc-900">
-                Why Choose LegalSaathi?
+                Why Choose Your Legal Saathi?
               </h2>
               <p className="text-lg text-zinc-700 mb-8 max-w-2xl mx-auto">
                 We are Authorized Service Provider (ASP) approved by Department of Registration and Stamps, Government of Maharashtra. Get expert legal assistance for all your real estate documentation needs.

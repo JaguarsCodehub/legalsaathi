@@ -23,7 +23,7 @@ export default function Home() {
   const whyChooseItems = [
     {
       title: "Legal Experts",
-      content: "Team of legal experts at LegalSaathi provides you assistance to make your registration easier.",
+      content: "Team of legal experts at Your Legal Saathi provides you assistance to make your registration easier.",
     },
     {
       title: "Doorstep Services",
@@ -58,17 +58,17 @@ export default function Home() {
 
   const testimonials = [
     {
-      quote: "Brilliant and Hassle-Free! Got the rent agreement done quickly without any middleman. LegalSaathi is a perfect example of how technology can enable smooth process with government agencies. Kudos to the team!",
+      quote: "Brilliant and Hassle-Free! Got the rent agreement done quickly without any middleman. Your Legal Saathi is a perfect example of how technology can enable smooth process with government agencies. Kudos to the team!",
       author: "MR VINODRAJ THODDETTI",
       location: "MUMBAI",
     },
     {
-      quote: "I own a flat at Mumbai and after retirement I am residing at Uttarakhand. It's really a great service that LegalSaathi is providing. I did everything at my own convenience. Biometric executive came to my home. Process was completed in weeks' time. I had great experience with them. Thanks!",
+      quote: "I own a flat at Mumbai and after retirement I am residing at Uttarakhand. It's really a great service that Your Legal Saathi is providing. I did everything at my own convenience. Biometric executive came to my home. Process was completed in weeks' time. I had great experience with them. Thanks!",
       author: "Mrs Geetanjali Gairola",
       location: "Uttarakhand",
     },
     {
-      quote: "Team LegalSaathi is doing a fantastic job. My tenant was in Pune and for occupational purpose I am residing at Brisbane. They saved my hassle of travelling. The biometric device was sent to me and proper support was provided. Thank you saviours.",
+      quote: "Team Your Legal Saathi is doing a fantastic job. My tenant was in Pune and for occupational purpose I am residing at Brisbane. They saved my hassle of travelling. The biometric device was sent to me and proper support was provided. Thank you saviours.",
       author: "Mr Domnic Pareirra",
       location: "Vasai - Currently at Brisbane",
     },
@@ -88,7 +88,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
           <p className="flex items-center gap-2 text-white/90">
             <span className="text-red-500">📍</span>
-            Sakinaka, Adnheri East, Mumbai, Maharashtra, India
+            Sakinaka, Andheri (E), Mumbai - 400072, Maharashtra
           </p>
           <div className="flex items-center gap-6 text-white/90">
             <a href="tel:+919653101966" className="hover:text-white transition-colors">+91 96531 01966</a>
@@ -105,7 +105,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 h-16 flex items-center justify-between">
           <Link href="#home" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
             <span className="inline-flex h-8 w-8 items-center justify-center rounded bg-orange-600 text-white font-bold">LS</span>
-            <span className="font-bold text-lg">LegalSaathi</span>
+            <span className="font-bold text-lg">Your Legal Saathi</span>
           </Link>
           <nav className="hidden md:flex items-center gap-8 text-sm">
             <a href="#home" className="text-orange-600 font-medium">Home</a>
@@ -229,7 +229,7 @@ export default function Home() {
                 SIMPLE & EFFICIENT PROCESS
               </span>
               <h2 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-orange-700 to-amber-700 bg-clip-text text-transparent">
-                How it works with LegalSaathi?
+                How it works with Your Legal Saathi?
               </h2>
               <p className="mt-4 text-lg text-zinc-600 max-w-2xl mx-auto">
                 Complete your Real Estate documentation in just 4 simple steps
@@ -243,23 +243,23 @@ export default function Home() {
           <div className="mt-16 grid gap-8 sm:gap-10 sm:grid-cols-2 lg:grid-cols-4 px-2">
             {[
               {
-                title: "Form Filling & Drafting",
-                icon: "✍️",
+                title: "Share Property & Party Details",
+                icon: "📋",
                 stepNumber: "01",
               },
               {
-                title: "Payment & Verification",
-                icon: "💳",
+                title: "Drafting",
+                icon: "✍️",
                 stepNumber: "02",
               },
               {
-                title: "Appointment for bio-metric",
-                icon: "🪪",
+                title: "Draft Verification",
+                icon: "✅",
                 stepNumber: "03",
               },
               {
-                title: "Agreement is Registered!",
-                icon: "👍",
+                title: "Appointment for biometric",
+                icon: "🪪",
                 stepNumber: "04",
               },
             ].map((card, index) => (
@@ -383,40 +383,46 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
             {[
               {
-                title: "Property Sale Agreements",
-                desc: "Comprehensive sale agreement documentation for real estate transactions. Get legally binding contracts drafted and registered with expert legal guidance for property sales.",
+                title: "Agreement for Sale",
+                desc: "Comprehensive agreement for sale documentation for real estate transactions. Get legally binding contracts drafted and registered with expert legal guidance for property sales.",
                 image: "https://images.pexels.com/photos/5797997/pexels-photo-5797997.jpeg?auto=compress&cs=tinysrgb&w=800",
+                icon: "📄",
+              },
+              {
+                title: "Sale Deed",
+                desc: "Professional sale deed registration services with complete legal documentation. We handle sale deed preparation and registration for residential and commercial properties with doorstep service.",
+                image: "https://images.pexels.com/photos/3797239/pexels-photo-3797239.jpeg?auto=compress&cs=tinysrgb&w=800",
                 icon: "🏠",
               },
               {
-                title: "Leave & License Agreements",
-                desc: "Professional rent agreement services with complete legal documentation. We handle leave and license agreements for residential and commercial properties with doorstep service.",
-                image: "https://images.pexels.com/photos/3797239/pexels-photo-3797239.jpeg?auto=compress&cs=tinysrgb&w=800",
-                icon: "📋",
-              },
-              {
-                title: "Property Registration",
-                desc: "Authorized property registration services approved by Government of Maharashtra. We ensure smooth registration process for all your real estate documents.",
+                title: "Will",
+                desc: "Expert will drafting and registration services. We ensure your assets are distributed according to your wishes with legally sound documentation approved by Government of Maharashtra.",
                 image: "https://images.pexels.com/photos/7710168/pexels-photo-7710168.jpeg?auto=compress&cs=tinysrgb&w=800",
-                icon: "✅",
+                icon: "📜",
               },
               {
-                title: "Legal Document Drafting",
-                desc: "Expert legal document drafting services for all your real estate needs. From contracts to agreements, we provide comprehensive legal documentation support.",
+                title: "Release Deed",
+                desc: "Complete release deed documentation services for property transactions. We provide comprehensive legal documentation support for releasing property rights and interests.",
                 image: "https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=800",
                 icon: "✍️",
               },
               {
-                title: "Property Verification",
-                desc: "Thorough property verification and due diligence services. We help verify property titles, ownership, and legal status before you make any real estate investment.",
+                title: "Gift Deed",
+                desc: "Professional gift deed registration services for property gifting. We help transfer property ownership through legal gift deeds with proper documentation and registration.",
                 image: "https://images.pexels.com/photos/7578935/pexels-photo-7578935.jpeg?auto=compress&cs=tinysrgb&w=800",
-                icon: "🔍",
+                icon: "🎁",
               },
               {
-                title: "Remote Legal Services",
-                desc: "Complete legal documentation services for property owners residing outside Maharashtra or India. Get biometric verification and document processing done remotely.",
+                title: "Notary",
+                desc: "Authorized notary services for all your legal document attestation needs. We provide notarization services for various documents with expert legal verification.",
                 image: "https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=800",
-                icon: "🌐",
+                icon: "🔖",
+              },
+              {
+                title: "Power of Attorney",
+                desc: "Complete power of attorney documentation services. We draft and register power of attorney documents for property transactions and other legal matters with expert guidance.",
+                image: "https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=800",
+                icon: "⚖️",
               },
             ].map((service, index) => (
               <ScrollAnimate key={service.title} direction="up" delay={index * 150}>
@@ -478,23 +484,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About LegalSaathi */}
+      {/* About Your Legal Saathi */}
       <section className="bg-gradient-to-b from-white to-orange-50/20 py-16">
         <div className="mx-auto max-w-7xl px-4 grid lg:grid-cols-2 gap-10 items-center">
           <ScrollAnimate direction="left" delay={0}>
             <p className="text-sm font-semibold text-orange-700 tracking-widest uppercase">AUTHORISED SERVICE PROVIDER (ASP)</p>
-            <h2 className="mt-2 text-3xl sm:text-4xl font-bold">About LegalSaathi</h2>
+            <h2 className="mt-2 text-3xl sm:text-4xl font-bold">About Your Legal Saathi</h2>
             <div className="mt-4 h-1 w-16 bg-orange-600"></div>
             <p className="mt-6 text-zinc-700 leading-7">
-              We are a group of professionals who are Authorized Service Provider (ASP) approved by Department of Registration and Stamps, Govt of Maharashtra who work to simplify legal documentation.
+              We are a group of professionals who work to simplify legal documentation.
             </p>
             <p className="mt-4 text-zinc-700 leading-7">
               We combine technology with Government&apos;s latest e-initiative technology and documentation services to clients at the best rates in market. We bring numerous Government services under one roof & simplify them in a manner that a common man can understand.
             </p>
-            <div className="mt-6 bg-white rounded-lg p-4 border border-orange-200 inline-block hover:shadow-lg transition-shadow duration-300">
-              <p className="text-sm text-zinc-600 mb-1">MAH-ASP-3973/2019</p>
-              <p className="font-semibold text-orange-600">Government Authorised E-Registration Service Provider</p>
-            </div>
           </ScrollAnimate>
           <ScrollAnimate direction="right" delay={200}>
             <div className="relative">
@@ -529,7 +531,7 @@ export default function Home() {
             </h2>
             <div className="mt-4 h-1 w-16 bg-orange-600"></div>
             <p className="mt-6 text-zinc-700 leading-7">
-              At LegalSaathi, with our pan-India network and government-approved service provider certifications, we provide
+              At Your Legal Saathi, with our pan-India network and government-approved service provider certifications, we provide
               online registration services with doorstep assistance for KYC & documentation. We use cutting-edge technology
               to streamline processes and new e-initiatives offered by the government to make all legal processes simple and
               accessible for our clients from the comfort of their home.
@@ -544,7 +546,7 @@ export default function Home() {
           <ScrollAnimate direction="up" delay={0}>
             <div className="text-center mb-12">
               <p className="text-sm font-semibold text-orange-700 tracking-widest uppercase">WE ARE THE BEST!!</p>
-              <h2 className="mt-2 text-3xl sm:text-4xl font-bold">Why Choose LegalSaathi?</h2>
+              <h2 className="mt-2 text-3xl sm:text-4xl font-bold">Why Choose Your Legal Saathi?</h2>
               <div className="mt-4 h-1 w-16 bg-orange-600 mx-auto"></div>
             </div>
           </ScrollAnimate>

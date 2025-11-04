@@ -18,11 +18,11 @@ export default function Footer() {
                 LS
               </span>
               <span className="font-bold text-2xl bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">
-                LegalSaathi
+                Your Legal Saathi
               </span>
             </div>
             <p className="text-sm text-zinc-300 leading-7 mb-6">
-              Your trusted partner for Real Estate Legal Documentation. We are Authorised Service Provider (ASP) approved by Department of Registration and Stamps, Government of Maharashtra.
+              Your trusted partner for Real Estate Legal Documentation.
             </p>
             <div className="flex items-center gap-3">
               <div className="h-10 w-10 rounded-full bg-orange-600/20 hover:bg-orange-600/30 flex items-center justify-center cursor-pointer transition-all hover:scale-110">
@@ -162,7 +162,7 @@ export default function Footer() {
                   <span className="text-lg">📍</span>
                 </div>
                 <p className="text-zinc-300 leading-6">
-                  Sakinaka, Adnheri East, Mumbai, Maharashtra, India
+                  Sakinaka, Andheri (E), Mumbai - 400072, Maharashtra
                 </p>
               </li>
             </ul>
@@ -172,7 +172,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-orange-800/50 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-zinc-400">
-            © {new Date().getFullYear()} <span className="text-orange-400 font-semibold">LegalSaathi</span>. All Rights Reserved
+            © {new Date().getFullYear()} <span className="text-orange-400 font-semibold">Your Legal Saathi</span>. All Rights Reserved
           </p>
           <a 
             href="https://growthunger.vercel.app" 

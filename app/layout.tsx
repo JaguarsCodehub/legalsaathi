@@ -9,7 +9,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "LegalSaathi | Online Rent Agreement & Real Estate Services",
+  title: "Your Legal Saathi | Online Rent Agreement & Real Estate Services",
   description:
     "Hassle‑free online rent agreement registration, leave & license services, and doorstep biometric verification. Authorized Service Provider (ASP) approved by Govt of Maharashtra.",
 };
