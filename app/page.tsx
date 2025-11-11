@@ -129,71 +129,67 @@ export default function Home() {
           <div className="absolute -bottom-20 left-1/2 w-72 h-72 bg-orange-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-float" style={{ animationDelay: '4s' }}></div>
         </div>
         
-        <div className="relative mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-8 items-center px-4 py-16 lg:py-24">
-          <ScrollAnimate direction="right" delay={0}>
-            <div className="relative z-10">
-              <span className="inline-block px-4 py-2 bg-orange-100 text-orange-700 rounded-full text-sm font-semibold mb-4 animate-pulse-glow">
-                Your Trusted Real Estate & Legal Partner
-              </span>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight bg-gradient-to-r from-orange-700 via-orange-600 to-amber-600 bg-clip-text text-transparent">
-                Real Estate Legal
-                <br /> Documents Made
-                <br /> Simple & Secure
-              </h1>
-              <p className="mt-6 text-lg sm:text-xl text-zinc-700 max-w-xl leading-relaxed">
-                Complete Real Estate documentation and legal services at your doorstep. From property registration to lease agreements, we handle all your legal document needs with expertise and care.
-              </p>
-              <div className="mt-8 flex flex-wrap items-center gap-4">
-                <Link href="#quote" className="group relative rounded-lg bg-gradient-to-r from-orange-600 to-amber-600 text-white px-8 py-4 font-semibold hover:from-orange-700 hover:to-amber-700 transition-all shadow-lg hover:shadow-xl hover:scale-105 transform overflow-hidden">
-                  <span className="relative z-10">Get Free Consultation</span>
-                  <div className="absolute inset-0 shimmer-effect opacity-0 group-hover:opacity-100"></div>
-                </Link>
-                <a href="#how" className="group text-orange-700 font-semibold hover:text-orange-800 transition-all flex items-center gap-2">
-                  <span>How it works</span>
-                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </a>
-              </div>
-              {/* Quick stats in hero */}
-              <div className="mt-12 flex flex-wrap gap-6">
-                <div className="flex items-center gap-2">
-                  <div className="h-2 w-2 bg-orange-600 rounded-full animate-pulse"></div>
-                  <span className="text-sm font-medium text-zinc-700">100% Legal Compliance</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="h-2 w-2 bg-orange-600 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
-                  <span className="text-sm font-medium text-zinc-700">Doorstep Service</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="h-2 w-2 bg-orange-600 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
-                  <span className="text-sm font-medium text-zinc-700">Expert Legal Support</span>
-                </div>
-              </div>
+        <div className="relative mx-auto max-w-7xl px-4">
+          {/* <div className="mb-6 sm:mb-8">
+            <div className="overflow-hidden rounded-full bg-orange-600 text-white shadow-lg">
+              <marquee className="py-2 text-sm sm:text-base font-semibold tracking-wide">
+                <span className="mx-8">Online Rental Agreement Doorstep Service ₹ 999/- Only (Including Online Police NOC)</span>
+                <span className="mx-8">Serving Mumbai • Navi Mumbai • Panvel • Thane • Mira-Bhayander • Vasai-Virar • Palghar • Kalyan-Dombiwali • Ambernath-Badlapur • Ulhasnagar • Pune • All Over Maharashtra • India & Overseas</span>
+                <span className="mx-8">We also do NRI Rental Agreement Registration</span>
+              </marquee>
             </div>
-          </ScrollAnimate>
-          <ScrollAnimate direction="left" delay={200}>
-            <div className="relative z-10">
-              <div className="relative group">
-                <div className="absolute -inset-4 bg-gradient-to-r from-orange-400 to-amber-400 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
-                <Image
-                  src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1600&auto=format&fit=crop"
-                  alt="Real Estate and Legal Documents"
-                  width={1600}
-                  height={1200}
-                  className="relative rounded-2xl shadow-2xl w-full h-auto object-cover hover:shadow-orange-200/50 transition-all duration-500 hover:scale-[1.02] transform"
-                  priority
-                />
-                {/* Floating badge overlay */}
-                <div className="absolute top-6 right-6 bg-white/90 backdrop-blur-sm rounded-full px-6 py-3 shadow-lg border-2 border-orange-200 animate-float">
+          </div> */}
+
+          <div className="py-16 lg:py-24">
+            <ScrollAnimate direction="up" delay={0}>
+              <div className="relative z-10 max-w-4xl mx-auto text-center">
+                <span className="inline-block px-4 py-2 bg-orange-100 text-orange-700 rounded-full text-sm font-semibold mb-4 animate-pulse-glow">
+                  Doorstep Rental Agreement Experts
+                </span>
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-zinc-900">
+                  Online Rental Agreement Doorstep Service
+                  <span className="block text-3xl sm:text-4xl lg:text-5xl mt-2 text-orange-600">₹ 999/- Only</span>
+                </h1>
+                <p className="mt-6 text-lg sm:text-xl text-zinc-700 max-w-2xl mx-auto leading-relaxed">
+                  Including Online Police NOC with every agreement. Doorstep biometric, drafting, and registration handled by experts.
+                </p>
+                <div className="mt-6 text-sm sm:text-base text-zinc-800 font-semibold leading-relaxed bg-orange-50 border border-orange-200 rounded-2xl px-5 py-4 shadow-sm">
+                  • Mumbai • Navi Mumbai • Panvel • Thane • Mira-Bhayander • Vasai-Virar • Palghar • Kalyan-Dombiwali • Ambernath-Badlapur • Ulhasnagar • Pune • All Over Maharashtra • India & Overseas
+                </div>
+                <div className="mt-4 inline-flex items-center gap-2 bg-orange-100 border border-orange-200 text-orange-700 px-4 py-2 rounded-full font-semibold shadow-sm">
+                  <span className="text-lg">🌍</span>
+                  <span>We also do NRI Rental Agreement Registration</span>
+                </div>
+                <div className="mt-8 flex flex-wrap justify-center items-center gap-4">
+                  <Link href="#quote" className="group relative rounded-lg bg-gradient-to-r from-orange-600 to-amber-600 text-white px-8 py-4 font-semibold hover:from-orange-700 hover:to-amber-700 transition-all shadow-lg hover:shadow-xl hover:scale-105 transform overflow-hidden">
+                    <span className="relative z-10">Start Your Agreement</span>
+                    <div className="absolute inset-0 shimmer-effect opacity-0 group-hover:opacity-100"></div>
+                  </Link>
+                  <a href="#how" className="group text-orange-700 font-semibold hover:text-orange-800 transition-all flex items-center gap-2">
+                    <span>How it works</span>
+                    <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                  </a>
+                </div>
+                {/* Quick stats in hero */}
+                <div className="mt-12 flex flex-wrap justify-center gap-6">
                   <div className="flex items-center gap-2">
-                    <div className="h-3 w-3 bg-green-500 rounded-full animate-pulse"></div>
-                    <span className="text-sm font-bold text-orange-700">Trusted by 12K+ Clients</span>
+                    <div className="h-2 w-2 bg-orange-600 rounded-full animate-pulse"></div>
+                    <span className="text-sm font-medium text-zinc-700">₹ 999/- Including Online Police NOC</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="h-2 w-2 bg-orange-600 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+                    <span className="text-sm font-medium text-zinc-700">Doorstep Biometric Service</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="h-2 w-2 bg-orange-600 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
+                    <span className="text-sm font-medium text-zinc-700">NRI Documentation Support</span>
                   </div>
                 </div>
               </div>
-            </div>
-          </ScrollAnimate>
+            </ScrollAnimate>
+          </div>
         </div>
       </section>
 
