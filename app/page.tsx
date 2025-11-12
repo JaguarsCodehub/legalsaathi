@@ -104,8 +104,14 @@ export default function Home() {
       }`}>
         <div className="mx-auto max-w-7xl px-4 h-16 flex items-center justify-between">
           <Link href="#home" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <span className="inline-flex h-8 w-8 items-center justify-center rounded bg-orange-600 text-white font-bold">LS</span>
-            <span className="font-bold text-lg">Your Legal Saathi</span>
+            <Image
+              src="/logo.png"
+              alt="Your Legal Saathi"
+              width={280}
+              height={90}
+              className="h-28 w-auto object-contain"
+              priority
+            />
           </Link>
           <nav className="hidden md:flex items-center gap-8 text-sm">
             <a href="#home" className="text-orange-600 font-medium">Home</a>

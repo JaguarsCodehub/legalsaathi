@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function Header() {
@@ -58,8 +59,14 @@ export default function Header() {
       }`}>
         <div className="mx-auto max-w-7xl px-4 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity" onClick={closeMobileMenu}>
-            <span className="inline-flex h-8 w-8 items-center justify-center rounded bg-orange-600 text-white font-bold">LS</span>
-            <span className="font-bold text-lg">Your Legal Saathi</span>
+            <Image
+              src="/logo.png"
+              alt="Your Legal Saathi"
+              width={280}
+              height={90}
+              className="h-28 w-auto object-contain"
+              priority
+            />
           </Link>
           
           {/* Desktop Navigation */}
@@ -67,6 +74,7 @@ export default function Header() {
             <Link href="/" className="hover:text-orange-600 transition-colors">Home</Link>
             <Link href="/services" className="hover:text-orange-600 transition-colors">Services</Link>
             <Link href="/why-choose-us" className="hover:text-orange-600 transition-colors">Why Choose Us</Link>
+            <Link href="/blogs" className="hover:text-orange-600 transition-colors">Blogs</Link>
             <Link href="/contact" className="hover:text-orange-600 transition-colors">Contact</Link>
           </nav>
           
@@ -126,6 +134,13 @@ export default function Header() {
                   className="px-6 py-4 text-zinc-700 hover:text-orange-600 hover:bg-orange-50 border-b border-zinc-100 transition-colors font-medium"
                 >
                   Why Choose Us
+                </Link>
+                <Link
+                  href="/blogs"
+                  onClick={closeMobileMenu}
+                  className="px-6 py-4 text-zinc-700 hover:text-orange-600 hover:bg-orange-50 border-b border-zinc-100 transition-colors font-medium"
+                >
+                  Blogs
                 </Link>
                 <Link
                   href="/contact"
