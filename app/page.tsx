@@ -118,6 +118,7 @@ export default function Home() {
             <Link href="/services" className="hover:text-orange-600 transition-colors">Services</Link>
             <a href="#how" className="hover:text-orange-600 transition-colors">How It Works</a>
             <Link href="/why-choose-us" className="hover:text-orange-600 transition-colors">Why Choose Us</Link>
+            <Link href="/blogs" className="hover:text-orange-600 transition-colors">Blogs</Link>
             <Link href="/contact" className="hover:text-orange-600 transition-colors">Contact</Link>
           </nav>
           <Link href="/contact" className="hidden md:inline-flex rounded-md bg-orange-600 text-white px-4 py-2 text-sm font-medium hover:bg-orange-700 transition-colors">
