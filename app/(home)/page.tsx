@@ -2,11 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import QuoteForm from "./components/QuoteForm";
-import Accordion from "./components/Accordion";
-import AutoCarousel from "./components/AutoCarousel";
-import ScrollAnimate from "./components/ScrollAnimate";
-import Footer from "./components/Footer";
+import QuoteForm from "../components/QuoteForm";
+import Accordion from "../components/Accordion";
+import AutoCarousel from "../components/AutoCarousel";
+import ScrollAnimate from "../components/ScrollAnimate";
+import Footer from "../components/Footer";
+import { FAQStructuredData } from "../components/StructuredData";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -106,7 +107,7 @@ export default function Home() {
           <Link href="#home" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
             <Image
               src="/logo.png"
-              alt="Your Legal Saathi"
+              alt="Your Legal Saathi - Leave License Agreement Registration Mumbai, Rent Agreement Services"
               width={280}
               height={90}
               className="h-28 w-auto object-contain"
@@ -117,8 +118,8 @@ export default function Home() {
             <a href="#home" className="text-orange-600 font-medium">Home</a>
             <Link href="/services" className="hover:text-orange-600 transition-colors">Services</Link>
             <a href="#how" className="hover:text-orange-600 transition-colors">How It Works</a>
+            <Link href="/blogs" className="hover:text-orange-600 transition-colors">Our Blogs</Link>
             <Link href="/why-choose-us" className="hover:text-orange-600 transition-colors">Why Choose Us</Link>
-            <Link href="/blogs" className="hover:text-orange-600 transition-colors">Blogs</Link>
             <Link href="/contact" className="hover:text-orange-600 transition-colors">Contact</Link>
           </nav>
           <Link href="/contact" className="hidden md:inline-flex rounded-md bg-orange-600 text-white px-4 py-2 text-sm font-medium hover:bg-orange-700 transition-colors">
@@ -137,39 +138,22 @@ export default function Home() {
         </div>
         
         <div className="relative mx-auto max-w-7xl px-4">
-          {/* <div className="mb-6 sm:mb-8">
-            <div className="overflow-hidden rounded-full bg-orange-600 text-white shadow-lg">
-              <marquee className="py-2 text-sm sm:text-base font-semibold tracking-wide">
-                <span className="mx-8">Online Rental Agreement Doorstep Service ₹ 999/- Only (Including Online Police NOC)</span>
-                <span className="mx-8">Serving Mumbai • Navi Mumbai • Panvel • Thane • Mira-Bhayander • Vasai-Virar • Palghar • Kalyan-Dombiwali • Ambernath-Badlapur • Ulhasnagar • Pune • All Over Maharashtra • India & Overseas</span>
-                <span className="mx-8">We also do NRI Rental Agreement Registration</span>
-              </marquee>
-            </div>
-          </div> */}
-
           <div className="py-16 lg:py-24">
             <ScrollAnimate direction="up" delay={0}>
               <div className="relative z-10 max-w-4xl mx-auto text-center">
-                <span className="inline-block px-4 py-2 bg-orange-100 text-orange-700 rounded-full text-sm font-semibold mb-4 animate-pulse-glow">
-                  Doorstep Rental Agreement Experts
-                </span>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-zinc-900">
-                  Online Rental Agreement Doorstep Service
-                  <span className="block text-3xl sm:text-4xl lg:text-5xl mt-2 text-orange-600">₹ 999/- Only</span>
+                  Hassle Free
+                  <br />
+                  <span className="text-orange-600">Online Rent Agreement</span>
+                  <br />
+                  Registration.
                 </h1>
                 <p className="mt-6 text-lg sm:text-xl text-zinc-700 max-w-2xl mx-auto leading-relaxed">
-                  Including Online Police NOC with every agreement. Doorstep biometric, drafting, and registration handled by experts.
+                  Skip the queue and get your rent agreement registered in no-time with Your Legal Saathi.
                 </p>
-                <div className="mt-6 text-sm sm:text-base text-zinc-800 font-semibold leading-relaxed bg-orange-50 border border-orange-200 rounded-2xl px-5 py-4 shadow-sm">
-                  • Mumbai • Navi Mumbai • Panvel • Thane • Mira-Bhayander • Vasai-Virar • Palghar • Kalyan-Dombiwali • Ambernath-Badlapur • Ulhasnagar • Pune • All Over Maharashtra • India & Overseas
-                </div>
-                <div className="mt-4 inline-flex items-center gap-2 bg-orange-100 border border-orange-200 text-orange-700 px-4 py-2 rounded-full font-semibold shadow-sm">
-                  <span className="text-lg">🌍</span>
-                  <span>We also do NRI Rental Agreement Registration</span>
-                </div>
                 <div className="mt-8 flex flex-wrap justify-center items-center gap-4">
                   <Link href="#quote" className="group relative rounded-lg bg-gradient-to-r from-orange-600 to-amber-600 text-white px-8 py-4 font-semibold hover:from-orange-700 hover:to-amber-700 transition-all shadow-lg hover:shadow-xl hover:scale-105 transform overflow-hidden">
-                    <span className="relative z-10">Start Your Agreement</span>
+                    <span className="relative z-10">Draft your document</span>
                     <div className="absolute inset-0 shimmer-effect opacity-0 group-hover:opacity-100"></div>
                   </Link>
                   <a href="#how" className="group text-orange-700 font-semibold hover:text-orange-800 transition-all flex items-center gap-2">
@@ -178,21 +162,6 @@ export default function Home() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                     </svg>
                   </a>
-                </div>
-                {/* Quick stats in hero */}
-                <div className="mt-12 flex flex-wrap justify-center gap-6">
-                  <div className="flex items-center gap-2">
-                    <div className="h-2 w-2 bg-orange-600 rounded-full animate-pulse"></div>
-                    <span className="text-sm font-medium text-zinc-700">₹ 999/- Including Online Police NOC</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="h-2 w-2 bg-orange-600 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
-                    <span className="text-sm font-medium text-zinc-700">Doorstep Biometric Service</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="h-2 w-2 bg-orange-600 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
-                    <span className="text-sm font-medium text-zinc-700">NRI Documentation Support</span>
-                  </div>
                 </div>
               </div>
             </ScrollAnimate>
@@ -437,7 +406,7 @@ export default function Home() {
                   <div className="relative h-64 overflow-hidden">
                     <Image
                       src={service.image}
-                      alt={service.title}
+                      alt={`${service.title} Services Mumbai - Legal Documentation and Registration by Your Legal Saathi`}
                       fill
                       className="object-cover group-hover:scale-110 transition-transform duration-700"
                     />
@@ -505,7 +474,7 @@ export default function Home() {
             <div className="relative">
               <Image
                 src="https://images.pexels.com/photos/7578935/pexels-photo-7578935.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt="Authorized service provider"
+                alt="Authorized Service Provider (ASP) for Leave License Agreement and Rent Agreement Registration in Mumbai, Maharashtra"
                 width={1200}
                 height={1000}
                 className="rounded-2xl shadow-lg w-full h-auto object-cover hover:shadow-xl transition-shadow duration-300 hover:scale-105 transform"
@@ -521,7 +490,7 @@ export default function Home() {
           <ScrollAnimate direction="right" delay={0} className="relative order-2 lg:order-1">
             <Image
               src="https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=1600"
-              alt="Professional team working together"
+              alt="Professional Legal Team for Leave License Agreement Registration and Real Estate Documentation Services in Mumbai"
               width={1200}
               height={1000}
               className="rounded-2xl shadow-lg w-full h-auto object-cover hover:shadow-xl transition-shadow duration-300 hover:scale-105 transform"
@@ -561,7 +530,7 @@ export default function Home() {
               <div className="relative">
                 <Image
                   src="https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                  alt="Professional services"
+                  alt="Expert Legal Services for Leave License Agreement, Rent Agreement Registration, and Property Documentation in Mumbai"
                   width={1200}
                   height={1000}
                   className="rounded-2xl shadow-lg w-full h-auto object-cover hover:shadow-xl transition-shadow duration-300 hover:scale-105 transform"
@@ -666,17 +635,56 @@ export default function Home() {
 
       <Footer />
 
-      {/* Floating WhatsApp Button */}
+      {/* FAQ Schema for SEO - Hidden, only for structured data */}
+      <FAQStructuredData
+        questions={[
+          {
+            question: "What is a Leave License Agreement?",
+            answer: "A Leave License Agreement is a legal document that allows a property owner (licensor) to grant permission to another person (licensee) to use and occupy the property for a specific period. Unlike a rent agreement, it doesn't create a tenancy right and is easier to terminate.",
+          },
+          {
+            question: "How to register Leave License Agreement in Mumbai?",
+            answer: "To register a Leave License Agreement in Mumbai, you need to: 1) Prepare the agreement document with all required details, 2) Gather necessary documents (ID proof, address proof, property documents), 3) Book an appointment for biometric verification, 4) Pay the registration fees, 5) Complete biometric verification at the sub-registrar office or through doorstep service. Your Legal Saathi provides complete assistance for this process.",
+          },
+          {
+            question: "What is the difference between Leave License Agreement and Rent Agreement?",
+            answer: "The main difference is that a Leave License Agreement grants a license to use the property without creating tenancy rights, making it easier to terminate. A Rent Agreement creates a landlord-tenant relationship with stronger tenant rights. Leave License Agreements are preferred for shorter durations and commercial properties.",
+          },
+          {
+            question: "What documents are required for Leave License Agreement registration?",
+            answer: "Required documents include: ID proof (Aadhaar, PAN card, passport), address proof of both parties, property ownership documents, property tax receipts, NOC from society/association (if applicable), passport size photographs, and previous agreement (if renewal).",
+          },
+          {
+            question: "How much does Leave License Agreement registration cost in Mumbai?",
+            answer: "The registration cost varies based on the agreement value and stamp duty. Typically, it ranges from ₹500 to ₹2,000 for stamp duty plus registration fees. Your Legal Saathi offers complete Leave License Agreement registration services starting at ₹999, including online police NOC and doorstep biometric service.",
+          },
+          {
+            question: "Can I register Leave License Agreement online in Mumbai?",
+            answer: "Yes, you can initiate the process online, but physical biometric verification at the sub-registrar office or through authorized doorstep service is mandatory. Your Legal Saathi provides online document preparation and doorstep biometric service for your convenience.",
+          },
+          {
+            question: "How long does it take to register a Leave License Agreement?",
+            answer: "The registration process typically takes 3-7 working days after all documents are submitted and biometric verification is completed. With Your Legal Saathi's streamlined process and doorstep service, you can complete registration faster.",
+          },
+          {
+            question: "Is Leave License Agreement mandatory in Mumbai?",
+            answer: "While not always legally mandatory, registering a Leave License Agreement is highly recommended as it provides legal protection to both parties, helps with police verification, and is required for various official purposes like opening bank accounts, getting gas connections, etc.",
+          },
+        ]}
+      />
+
+      {/* Sticky WhatsApp Bar - Mobile Only */}
       <a
         href="https://wa.me/919653101966?text=Hello%2C%20I'm%20interested%20to%20know%20more%20about%20you%20%21"
         target="_blank"
         rel="noreferrer"
-        className="fixed bottom-6 right-6 inline-flex h-14 w-14 items-center justify-center rounded-full bg-green-500 text-white shadow-lg hover:bg-green-600 hover:scale-110 transition-all duration-300 z-40"
-        aria-label="WhatsApp"
+        className="fixed bottom-0 left-0 right-0 md:hidden flex items-center justify-center gap-3 bg-[#25D366] text-white px-4 py-4 z-50 shadow-lg hover:bg-[#20BA5A] transition-colors duration-300"
+        aria-label="Chat on WhatsApp"
       >
-        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+        <svg className="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 24 24">
           <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
         </svg>
+        <span className="font-semibold text-base">Chat on WhatsApp</span>
       </a>
 
       {/* Floating Get Quote Tab */}

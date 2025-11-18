@@ -40,7 +40,7 @@ export default function BlogPost() {
             <div className="relative h-96 mb-8 rounded-xl overflow-hidden">
               <Image
                 src="https://images.pexels.com/photos/5797997/pexels-photo-5797997.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                alt="Leave and License Agreement"
+                alt="Leave and License Agreement Registration Mumbai - Complete Guide by Your Legal Saathi"
                 fill
                 className="object-cover"
               />

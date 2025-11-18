@@ -110,7 +110,7 @@ export default function Services() {
                   <div className="relative h-64 overflow-hidden">
                     <Image
                       src={service.image}
-                      alt={service.title}
+                      alt={`${service.title} Services Mumbai - Expert Legal Documentation and Registration by Your Legal Saathi`}
                       fill
                       className="object-cover group-hover:scale-110 transition-transform duration-700"
                     />
