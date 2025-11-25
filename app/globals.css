@@ -236,6 +236,19 @@ html {
   animation: shimmer 3s infinite;
 }
 
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce 2s ease-in-out infinite;
+}
+
 /* Prevent overflow on mobile */
 html, body {
   overflow-x: hidden;
