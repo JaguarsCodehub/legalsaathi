@@ -57,14 +57,14 @@ export default function Header() {
       <header className={`sticky top-0 z-50 border-b transition-all duration-300 ${
         isScrolled ? "bg-white shadow-sm" : "bg-white/90 backdrop-blur"
       }`}>
-        <div className="mx-auto max-w-7xl px-4 h-16 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity" onClick={closeMobileMenu}>
+        <div className="mx-auto max-w-7xl px-4 h-16 flex items-center justify-between relative w-full">
+          <Link href="/" className="hidden md:flex items-center gap-2 hover:opacity-80 transition-opacity shrink-0 min-w-0 md:min-w-auto" onClick={closeMobileMenu}>
             <Image
               src="/logo.png"
               alt="Your Legal Saathi"
               width={280}
               height={90}
-              className="h-28 w-auto object-contain"
+              className="h-10 md:h-28 w-auto object-contain max-w-[120px] md:max-w-none"
               priority
             />
           </Link>
@@ -84,19 +84,21 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button - Always visible on mobile */}
           <button
             onClick={toggleMobileMenu}
-            className="md:hidden p-2 rounded-md text-zinc-700 hover:text-orange-600 hover:bg-orange-50 transition-colors"
+            type="button"
+            className="md:hidden absolute right-4 top-1/2 -translate-y-1/2 p-2.5 rounded-md text-zinc-700 bg-white/90 backdrop-blur-sm border border-zinc-200 shadow-sm hover:text-orange-600 hover:bg-orange-50 hover:border-orange-200 transition-colors z-50 flex items-center justify-center"
             aria-label="Toggle menu"
+            aria-expanded={isMobileMenuOpen}
           >
             {isMobileMenuOpen ? (
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
             ) : (
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             )}
           </button>

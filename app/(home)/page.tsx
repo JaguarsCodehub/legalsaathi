@@ -12,6 +12,7 @@ import { useEffect, useState } from "react";
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,6 +21,26 @@ export default function Home() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isMobileMenuOpen]);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
 
   const whyChooseItems = [
     {
@@ -117,17 +138,18 @@ export default function Home() {
           isScrolled ? 'bg-white shadow-sm' : 'bg-white/90 backdrop-blur'
         }`}
       >
-        <div className='mx-auto max-w-7xl px-4 h-16 flex items-center justify-between'>
+        <div className='mx-auto max-w-7xl px-4 h-16 flex items-center justify-between relative w-full'>
           <Link
             href='#home'
-            className='flex items-center gap-2 hover:opacity-80 transition-opacity'
+            className='flex items-center gap-2 hover:opacity-80 transition-opacity shrink-0 min-w-0 md:min-w-auto'
+            onClick={closeMobileMenu}
           >
             <Image
               src='/logo.png'
               alt='Your Legal Saathi - Leave License Agreement Registration Mumbai, Rent Agreement Services'
               width={280}
               height={90}
-              className='h-28 w-auto object-contain'
+              className='h-28 md:h-28 w-auto object-contain max-w-[180px] md:max-w-none'
               priority
             />
           </Link>
@@ -169,7 +191,92 @@ export default function Home() {
           >
             Get Free Quote
           </Link>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={toggleMobileMenu}
+            type="button"
+            className="md:hidden absolute right-4 top-1/2 -translate-y-1/2 p-2.5 rounded-md text-zinc-700 bg-white/90 backdrop-blur-sm border border-zinc-200 shadow-sm hover:text-orange-600 hover:bg-orange-50 hover:border-orange-200 transition-colors z-50 flex items-center justify-center"
+            aria-label="Toggle menu"
+            aria-expanded={isMobileMenuOpen}
+          >
+            {isMobileMenuOpen ? (
+              <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
+          </button>
         </div>
+
+        {/* Mobile Menu Overlay */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden">
+            {/* Backdrop */}
+            <div
+              className="fixed inset-0 bg-black/50 z-40 top-16"
+              onClick={closeMobileMenu}
+            />
+            
+            {/* Mobile Menu */}
+            <div className="fixed top-16 left-0 right-0 bg-white shadow-xl z-50 border-t border-zinc-200 transform transition-transform duration-300 ease-in-out">
+              <nav className="flex flex-col">
+                <a
+                  href="#home"
+                  onClick={closeMobileMenu}
+                  className="px-6 py-4 text-zinc-700 hover:text-orange-600 hover:bg-orange-50 border-b border-zinc-100 transition-colors font-medium"
+                >
+                  Home
+                </a>
+                <Link
+                  href="/services"
+                  onClick={closeMobileMenu}
+                  className="px-6 py-4 text-zinc-700 hover:text-orange-600 hover:bg-orange-50 border-b border-zinc-100 transition-colors font-medium"
+                >
+                  Services
+                </Link>
+                <a
+                  href="#how"
+                  onClick={closeMobileMenu}
+                  className="px-6 py-4 text-zinc-700 hover:text-orange-600 hover:bg-orange-50 border-b border-zinc-100 transition-colors font-medium"
+                >
+                  How It Works
+                </a>
+                <Link
+                  href="/blogs"
+                  onClick={closeMobileMenu}
+                  className="px-6 py-4 text-zinc-700 hover:text-orange-600 hover:bg-orange-50 border-b border-zinc-100 transition-colors font-medium"
+                >
+                  Our Blogs
+                </Link>
+                <Link
+                  href="/why-choose-us"
+                  onClick={closeMobileMenu}
+                  className="px-6 py-4 text-zinc-700 hover:text-orange-600 hover:bg-orange-50 border-b border-zinc-100 transition-colors font-medium"
+                >
+                  Why Choose Us
+                </Link>
+                <Link
+                  href="/contact"
+                  onClick={closeMobileMenu}
+                  className="px-6 py-4 text-zinc-700 hover:text-orange-600 hover:bg-orange-50 border-b border-zinc-100 transition-colors font-medium"
+                >
+                  Contact
+                </Link>
+                <Link
+                  href="/contact"
+                  onClick={closeMobileMenu}
+                  className="mx-6 my-4 inline-flex justify-center rounded-md bg-orange-600 text-white px-6 py-3 text-sm font-medium hover:bg-orange-700 transition-colors"
+                >
+                  Get Free Quote
+                </Link>
+              </nav>
+            </div>
+          </div>
+        )}
       </header>
 
       {/* Hero */}
@@ -535,6 +642,13 @@ export default function Home() {
                 image:
                   'https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=800',
                 icon: '⚖️',
+              },
+              {
+                title: 'Leave & License Agreement',
+                desc: 'We draft and register leave & license agreement documents for property transactions and other legal matters with expert guidance.',
+                image:
+                  'https://images.pexels.com/photos/5905708/pexels-photo-5905708.jpeg?auto=compress&cs=tinysrgb&w=800',
+                icon: '📜',
               },
             ].map((service, index) => (
               <ScrollAnimate
